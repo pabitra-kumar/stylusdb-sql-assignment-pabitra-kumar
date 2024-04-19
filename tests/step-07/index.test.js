@@ -16,7 +16,8 @@ test('Parse SQL Query', () => {
     expect(parsed).toEqual({
         fields: ['id', 'name'],
         table: 'sample',
-        whereClauses: []
+        whereClauses: [],
+
     });
 });
 
@@ -37,10 +38,11 @@ test('Parse SQL Query with WHERE Clause', () => {
         fields: ['id', 'name'],
         table: 'sample',
         whereClauses: [{
-          field: "age",
-          operator: "=",
-          value: "25",
+            field: "age",
+            operator: "=",
+            value: "25",
         }],
+
     });
 });
 
@@ -67,7 +69,8 @@ test('Parse SQL Query with Multiple WHERE Clauses', () => {
             "field": "name",
             "operator": "=",
             "value": "John",
-        }]
+        }],
+
     });
 });
 
